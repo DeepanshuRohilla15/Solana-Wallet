@@ -30,15 +30,15 @@ export function SolanaWallet({ mnemonic }) {
     };
 
     return (
-        <div>
+        <div className="container">
             <button onClick={addWallet}>Add wallet</button>
             <h2>Public Keys</h2>
-            <div>
+            <div className="public-keys">
                 {publicKeys.length === 0 ? (
                     <p>No wallets created yet.</p>
                 ) : (
                     publicKeys.map((p, index) => (
-                        <div key={index}>{p.toBase58()}</div>
+                        <div className="public-keys" key={index}>{p.toBase58()}</div>
                     ))
                 )}
             </div>
