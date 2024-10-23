@@ -12,7 +12,7 @@ function App() {
         const mn = await generateMnemonic();
         setMnemonic(mn)
       }}>Create Seed Phrase</button>
-      <input type="text" value={mnemonic}></input>
+      <input className="input-box" type="text" value={mnemonic}></input>
       <SolanaWallet mnemonic={mnemonic} />
     </div>
   )
